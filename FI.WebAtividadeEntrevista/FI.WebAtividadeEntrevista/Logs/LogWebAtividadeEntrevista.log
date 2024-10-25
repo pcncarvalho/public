@@ -15,3 +15,4 @@
    em FI.AtividadeEntrevista.BLL.BoCliente.Incluir(Cliente cliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\BLL\BoCliente.cs:linha 28
    em WebAtividadeEntrevista.Controllers.ClienteController.Incluir(ClienteModel model) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 44 
 2024-10-24 21:14:26.2366 INFO ClienteController -> Alterar -> CPF informado já cadastrado. 
+2024-10-24 23:11:11.9878 INFO ClienteController -> Alterar -> CPF informado já cadastrado. 

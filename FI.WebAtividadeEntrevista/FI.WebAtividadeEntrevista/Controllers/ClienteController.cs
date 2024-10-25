@@ -156,7 +156,7 @@ namespace WebAtividadeEntrevista.Controllers
             }
             catch (Exception ex)
             {
-                logger.Error($"{this.ControllerContext.Controller.GetType().Name} -> ClienteList -> {ex}");
+                logger.Error($"{this.ControllerContext.Controller.GetType().Name} -> Alterar -> {ex}");
                 return View();
             }
         }

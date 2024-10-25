@@ -52,6 +52,12 @@ namespace FI.AtividadeEntrevista.DAL
             return cli.FirstOrDefault();
         }
 
+        /// <summary>
+        /// Verificar existencia de um cliente com CPF já cadastrado
+        /// </summary>
+        /// <param name="CPF"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         internal bool VerificarExistencia(string CPF, long id)
         {
             List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
@@ -123,7 +129,6 @@ namespace FI.AtividadeEntrevista.DAL
 
             base.Executar("FI_SP_AltClienteV2", parametros);
         }
-
 
         /// <summary>
         /// Excluir Cliente

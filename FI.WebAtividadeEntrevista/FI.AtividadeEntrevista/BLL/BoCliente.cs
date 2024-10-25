@@ -98,9 +98,10 @@ namespace FI.AtividadeEntrevista.BLL
         }
 
         /// <summary>
-        /// VerificaExistencia
+        /// Verificar existencia de um cliente com CPF já cadastrado
         /// </summary>
         /// <param name="CPF"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         public bool VerificarExistencia(string CPF, long id)
         {
