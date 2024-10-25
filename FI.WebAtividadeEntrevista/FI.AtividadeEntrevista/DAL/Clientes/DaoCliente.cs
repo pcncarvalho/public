@@ -27,6 +27,7 @@ namespace FI.AtividadeEntrevista.DAL
             parametros.Add(new System.Data.SqlClient.SqlParameter("Logradouro", cliente.Logradouro));
             parametros.Add(new System.Data.SqlClient.SqlParameter("Email", cliente.Email));
             parametros.Add(new System.Data.SqlClient.SqlParameter("Telefone", cliente.Telefone));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CPF", cliente.CPF));
 
             DataSet ds = base.Consultar("FI_SP_IncClienteV2", parametros);
             long ret = 0;
@@ -45,21 +46,22 @@ namespace FI.AtividadeEntrevista.DAL
 
             parametros.Add(new System.Data.SqlClient.SqlParameter("Id", Id));
 
-            DataSet ds = base.Consultar("FI_SP_ConsCliente", parametros);
+            DataSet ds = base.Consultar("FI_SP_ConsClienteV2", parametros);
             List<DML.Cliente> cli = Converter(ds);
 
             return cli.FirstOrDefault();
         }
 
-        internal bool VerificarExistencia(string CPF)
+        internal bool VerificarExistencia(string CPF, long id)
         {
             List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
 
             parametros.Add(new System.Data.SqlClient.SqlParameter("CPF", CPF));
 
             DataSet ds = base.Consultar("FI_SP_VerificaCliente", parametros);
+            long idCliente = ds.Tables[0].Rows.Count > 0 ? ds.Tables[0].Rows[0].Field<long>("ID") : 0;
 
-            return ds.Tables[0].Rows.Count > 0;
+            return ds.Tables[0].Rows.Count > 0 && id != idCliente;
         }
 
         internal List<Cliente> Pesquisa(int iniciarEm, int quantidade, string campoOrdenacao, bool crescente, out int qtd)
@@ -71,7 +73,7 @@ namespace FI.AtividadeEntrevista.DAL
             parametros.Add(new System.Data.SqlClient.SqlParameter("campoOrdenacao", campoOrdenacao));
             parametros.Add(new System.Data.SqlClient.SqlParameter("crescente", crescente));
 
-            DataSet ds = base.Consultar("FI_SP_PesqCliente", parametros);
+            DataSet ds = base.Consultar("FI_SP_PesqClienteV2", parametros);
             List<DML.Cliente> cli = Converter(ds);
 
             int iQtd = 0;
@@ -116,9 +118,10 @@ namespace FI.AtividadeEntrevista.DAL
             parametros.Add(new System.Data.SqlClient.SqlParameter("Logradouro", cliente.Logradouro));
             parametros.Add(new System.Data.SqlClient.SqlParameter("Email", cliente.Email));
             parametros.Add(new System.Data.SqlClient.SqlParameter("Telefone", cliente.Telefone));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CPF", cliente.CPF));
             parametros.Add(new System.Data.SqlClient.SqlParameter("ID", cliente.Id));
 
-            base.Executar("FI_SP_AltCliente", parametros);
+            base.Executar("FI_SP_AltClienteV2", parametros);
         }
 
 
@@ -153,6 +156,7 @@ namespace FI.AtividadeEntrevista.DAL
                     cli.Nome = row.Field<string>("Nome");
                     cli.Sobrenome = row.Field<string>("Sobrenome");
                     cli.Telefone = row.Field<string>("Telefone");
+                    cli.CPF = row.Field<string>("CPF");
                     lista.Add(cli);
                 }
             }

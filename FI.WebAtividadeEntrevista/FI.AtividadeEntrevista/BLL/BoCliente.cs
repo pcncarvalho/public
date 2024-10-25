@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FI.AtividadeEntrevista.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,20 @@ namespace FI.AtividadeEntrevista.BLL
         public long Incluir(DML.Cliente cliente)
         {
             DAL.DaoCliente cli = new DAL.DaoCliente();
+
+            cliente.CPF = cliente.CPF.SomenteAlfaNumericos();
+            cliente.CEP = cliente.CEP.SomenteAlfaNumericos();
+
+            if (!Utils.Utils.CPFValido(cliente.CPF))
+            {
+                throw new AtividadeEntrevistaException("CPF informado é inválido.");
+            }
+
+            if (VerificarExistencia(cliente.CPF, cliente.Id))
+            {
+                throw new AtividadeEntrevistaException("CPF informado já cadastrado.");
+            }
+
             return cli.Incluir(cliente);
         }
 
@@ -25,6 +40,20 @@ namespace FI.AtividadeEntrevista.BLL
         public void Alterar(DML.Cliente cliente)
         {
             DAL.DaoCliente cli = new DAL.DaoCliente();
+
+            cliente.CPF = cliente.CPF.SomenteAlfaNumericos();
+            cliente.CEP = cliente.CEP.SomenteAlfaNumericos();
+
+            if (!Utils.Utils.CPFValido(cliente.CPF))
+            {
+                throw new Exception("CPF informado é inválido.");
+            }
+
+            if (VerificarExistencia(cliente.CPF, cliente.Id))
+            {
+                throw new AtividadeEntrevistaException("CPF informado já cadastrado.");
+            }
+
             cli.Alterar(cliente);
         }
 
@@ -65,7 +94,7 @@ namespace FI.AtividadeEntrevista.BLL
         public List<DML.Cliente> Pesquisa(int iniciarEm, int quantidade, string campoOrdenacao, bool crescente, out int qtd)
         {
             DAL.DaoCliente cli = new DAL.DaoCliente();
-            return cli.Pesquisa(iniciarEm,  quantidade, campoOrdenacao, crescente, out qtd);
+            return cli.Pesquisa(iniciarEm, quantidade, campoOrdenacao, crescente, out qtd);
         }
 
         /// <summary>
@@ -73,10 +102,10 @@ namespace FI.AtividadeEntrevista.BLL
         /// </summary>
         /// <param name="CPF"></param>
         /// <returns></returns>
-        public bool VerificarExistencia(string CPF)
+        public bool VerificarExistencia(string CPF, long id)
         {
             DAL.DaoCliente cli = new DAL.DaoCliente();
-            return cli.VerificarExistencia(CPF);
+            return cli.VerificarExistencia(CPF, id);
         }
     }
 }
