@@ -38,6 +38,16 @@ namespace FI.WebAtividadeEntrevista
             bundles.Add(new ScriptBundle("~/bundles/altClientes").Include(
                       "~/Scripts/Clientes/FI.AltClientes.js"));
 
+
+
+            bundles.Add(new ScriptBundle("~/bundles/beneficiarios").Include(
+                     "~/Scripts/Clientes/FI.Beneficiarios.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/listBeneficiarios").Include(
+                      "~/Scripts/Clientes/FI.ListBeneficiarios.js"));
+
+
+
             bundles.Add(new ScriptBundle("~/bundles/jquerymask").Include(
                       "~/Scripts/jquery.mask.js",
                       "~/Scripts/jquery.mask.min.js"));

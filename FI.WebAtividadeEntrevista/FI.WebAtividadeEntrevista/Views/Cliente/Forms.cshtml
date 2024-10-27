@@ -51,7 +51,6 @@
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
@@ -60,7 +59,6 @@
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
@@ -75,12 +73,18 @@
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="col-lg-12">
             <div class="pull-right">
                 <button type="submit" class="btn btn-sm btn-success">Salvar</button>
                 @Html.ActionLink("Voltar", "Index", "Cliente", new { }, new { @class = "btn btn-sm btn-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="pull-left">
+                <button type="button" class="btn btn-sm btn-primary" onclick="$('#modal-beneficiarios #formCadastroBeneficiario').find('#CPF, #Nome').val(''); $('#modal-beneficiarios').modal('show');">Beneficiários</button>
             </div>
         </div>
     </div>

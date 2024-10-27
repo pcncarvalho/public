@@ -1,0 +1,149 @@
+2024-10-26 16:34:20.4442 INFO ClienteController -> Incluir -> O campo CEP é obrigatório.
+O campo Cidade é obrigatório.
+O campo Estado é obrigatório.
+O campo Logradouro é obrigatório.
+O campo Nacionalidade é obrigatório.
+O campo Sobrenome é obrigatório. 
+2024-10-26 16:35:02.0433 INFO ClienteController -> Incluir -> O campo CEP é obrigatório.
+O campo Cidade é obrigatório.
+O campo Estado é obrigatório.
+O campo Logradouro é obrigatório.
+O campo Nacionalidade é obrigatório.
+O campo Sobrenome é obrigatório. 
+2024-10-26 16:35:06.9772 INFO ClienteController -> Incluir -> O campo CEP é obrigatório.
+O campo Cidade é obrigatório.
+O campo Estado é obrigatório.
+O campo Logradouro é obrigatório.
+O campo Nacionalidade é obrigatório.
+O campo Sobrenome é obrigatório. 
+2024-10-26 16:36:38.0734 INFO ClienteController -> Incluir -> O campo CEP é obrigatório.
+O campo Cidade é obrigatório.
+O campo Estado é obrigatório.
+O campo Logradouro é obrigatório.
+O campo Nacionalidade é obrigatório.
+O campo Sobrenome é obrigatório. 
+2024-10-26 16:38:26.9593 INFO ClienteController -> Incluir -> O campo CEP é obrigatório.
+O campo Cidade é obrigatório.
+O campo Estado é obrigatório.
+O campo Logradouro é obrigatório.
+O campo Nacionalidade é obrigatório.
+O campo Sobrenome é obrigatório. 
+2024-10-26 18:07:23.8945 INFO ClienteController -> IncluirBeneficiario -> The value '@Model' is not valid for IdCliente.
+O campo Nome é obrigatório.
+O campo CPF é obrigatório. 
+2024-10-26 18:09:48.6615 INFO ClienteController -> IncluirBeneficiario -> O campo Nome é obrigatório.
+O campo CPF é obrigatório. 
+2024-10-26 18:10:21.4022 INFO ClienteController -> IncluirBeneficiario -> O campo Nome é obrigatório.
+O campo CPF é obrigatório. 
+2024-10-26 18:11:24.7885 INFO ClienteController -> IncluirBeneficiario -> O campo Nome é obrigatório.
+O campo CPF é obrigatório. 
+2024-10-26 18:11:36.6954 INFO ClienteController -> IncluirBeneficiario -> O campo Nome é obrigatório.
+O campo CPF é obrigatório. 
+2024-10-26 18:12:54.1286 INFO ClienteController -> IncluirBeneficiario -> O campo Nome é obrigatório.
+O campo CPF é obrigatório. 
+2024-10-26 18:41:08.7834 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
+2024-10-26 18:41:12.8182 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
+2024-10-26 18:41:15.0622 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
+2024-10-26 18:41:17.2544 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
+2024-10-26 18:41:19.3374 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
+2024-10-26 18:41:26.7886 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
+2024-10-26 18:44:09.5990 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
+2024-10-26 19:20:17.4038 ERROR ClienteController -> BeneficiarioList -> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'FI_SP_ConsBeneficiario'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   em System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   em System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   em FI.AtividadeEntrevista.DAL.AcessoDados.Consultar(String NomeProcedure, List`1 parametros) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Padrao\FI.AcessoDados.cs:linha 60
+   em FI.AtividadeEntrevista.DAL.DaoBeneficiario.ListarPorCliente(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Beneficiarios\DaoBeneficiario.cs:linha 59
+   em FI.AtividadeEntrevista.BLL.BoBeneficiario.ListarPorCliente(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\BLL\BoBeneficiario.cs:linha 78
+   em WebAtividadeEntrevista.Controllers.ClienteController.BeneficiarioList(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 254
+ClientConnectionId:9246a6c9-fa75-432d-ae2e-b815055509a2
+Error Number:2812,State:62,Class:16 
+2024-10-26 19:20:40.2175 ERROR ClienteController -> BeneficiarioList -> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'FI_SP_ConsBeneficiario'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   em System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   em System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   em FI.AtividadeEntrevista.DAL.AcessoDados.Consultar(String NomeProcedure, List`1 parametros) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Padrao\FI.AcessoDados.cs:linha 60
+   em FI.AtividadeEntrevista.DAL.DaoBeneficiario.ListarPorCliente(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Beneficiarios\DaoBeneficiario.cs:linha 59
+   em FI.AtividadeEntrevista.BLL.BoBeneficiario.ListarPorCliente(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\BLL\BoBeneficiario.cs:linha 78
+   em WebAtividadeEntrevista.Controllers.ClienteController.BeneficiarioList(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 254
+ClientConnectionId:9246a6c9-fa75-432d-ae2e-b815055509a2
+Error Number:2812,State:62,Class:16 
+2024-10-26 23:04:37.3442 ERROR ClienteController -> BeneficiarioList -> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'FI_SP_ConsBeneficiario'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   em System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   em System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   em FI.AtividadeEntrevista.DAL.AcessoDados.Consultar(String NomeProcedure, List`1 parametros) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Padrao\FI.AcessoDados.cs:linha 60
+   em FI.AtividadeEntrevista.DAL.DaoBeneficiario.ListarPorCliente(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Beneficiarios\DaoBeneficiario.cs:linha 59
+   em FI.AtividadeEntrevista.BLL.BoBeneficiario.ListarPorCliente(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\BLL\BoBeneficiario.cs:linha 78
+   em WebAtividadeEntrevista.Controllers.ClienteController.BeneficiarioList(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 254
+ClientConnectionId:34ea7920-a62a-4253-8a33-ed14df0fc8b8
+Error Number:2812,State:62,Class:16 
+2024-10-26 23:04:42.4719 ERROR ClienteController -> BeneficiarioList -> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'FI_SP_ConsBeneficiario'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   em System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   em System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   em FI.AtividadeEntrevista.DAL.AcessoDados.Consultar(String NomeProcedure, List`1 parametros) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Padrao\FI.AcessoDados.cs:linha 60
+   em FI.AtividadeEntrevista.DAL.DaoBeneficiario.ListarPorCliente(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Beneficiarios\DaoBeneficiario.cs:linha 59
+   em FI.AtividadeEntrevista.BLL.BoBeneficiario.ListarPorCliente(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\BLL\BoBeneficiario.cs:linha 78
+   em WebAtividadeEntrevista.Controllers.ClienteController.BeneficiarioList(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 254
+ClientConnectionId:34ea7920-a62a-4253-8a33-ed14df0fc8b8
+Error Number:2812,State:62,Class:16 
+2024-10-26 23:53:29.8986 INFO ClienteController -> IncluirBeneficiario -> CPF informado já cadastrado. 
+2024-10-26 23:55:04.3438 ERROR ClienteController -> IncluirBeneficiario -> System.IndexOutOfRangeException: Não é possível encontrar a tabela 0.
+   em System.Data.DataTableCollection.get_Item(Int32 index)
+   em FI.AtividadeEntrevista.DAL.DaoBeneficiario.Incluir(Beneficiario beneficiario) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Beneficiarios\DaoBeneficiario.cs:linha 27
+   em FI.AtividadeEntrevista.BLL.BoBeneficiario.Incluir(Beneficiario beneficiario) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\BLL\BoBeneficiario.cs:linha 32
+   em WebAtividadeEntrevista.Controllers.ClienteController.IncluirBeneficiario(BeneficiarioModel model) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 220 
+2024-10-26 23:56:50.1138 ERROR ClienteController -> IncluirBeneficiario -> System.IndexOutOfRangeException: Não é possível encontrar a tabela 0.
+   em System.Data.DataTableCollection.get_Item(Int32 index)
+   em FI.AtividadeEntrevista.DAL.DaoBeneficiario.Incluir(Beneficiario beneficiario) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Beneficiarios\DaoBeneficiario.cs:linha 27
+   em FI.AtividadeEntrevista.BLL.BoBeneficiario.Incluir(Beneficiario beneficiario) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\BLL\BoBeneficiario.cs:linha 32
+   em WebAtividadeEntrevista.Controllers.ClienteController.IncluirBeneficiario(BeneficiarioModel model) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 220 
+2024-10-26 23:58:02.8787 ERROR ClienteController -> BeneficiarioList -> System.ArgumentException: A coluna 'Id' não pertence à tabela Table.
+   em System.Data.DataRow.GetDataColumn(String columnName)
+   em System.Data.DataRow.get_Item(String columnName)
+   em System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   em FI.AtividadeEntrevista.DAL.DaoBeneficiario.Converter(DataSet ds) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Beneficiarios\DaoBeneficiario.cs:linha 158
+   em FI.AtividadeEntrevista.DAL.DaoBeneficiario.ListarPorCliente(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Beneficiarios\DaoBeneficiario.cs:linha 60
+   em FI.AtividadeEntrevista.BLL.BoBeneficiario.ListarPorCliente(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\BLL\BoBeneficiario.cs:linha 78
+   em WebAtividadeEntrevista.Controllers.ClienteController.BeneficiarioList(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 268 

@@ -8,8 +8,10 @@ $(document).ready(function () {
             pageSize: 5, //Set page size (default: 10)
             sorting: true, //Enable sorting
             defaultSorting: 'Nome ASC', //Set default sorting
+            jqueryuiTheme: '',
             actions: {
-                listAction: urlClienteList,
+                listAction: urlClienteList
+                //updateAction: 'urlClienteList'
             },
             fields: {
                 Nome: {

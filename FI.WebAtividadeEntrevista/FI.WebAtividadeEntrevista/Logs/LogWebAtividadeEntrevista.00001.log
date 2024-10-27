@@ -1,0 +1,18 @@
+2024-10-24 19:37:09.9678 INFO CPF informado já cadastrado. 
+2024-10-24 19:37:54.5070 INFO ClienteController - Incluir - FI.AtividadeEntrevista.Utils.AtividadeEntrevistaException: CPF informado já cadastrado.
+   em FI.AtividadeEntrevista.BLL.BoCliente.Incluir(Cliente cliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\BLL\BoCliente.cs:linha 33
+   em WebAtividadeEntrevista.Controllers.ClienteController.Incluir(ClienteModel model) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 44 
+2024-10-24 20:09:14.6037 INFO ClienteController -> Incluir -> CPF informado já cadastrado. 
+2024-10-24 20:12:55.0238 INFO ClienteController -> Alterar -> CPF informado já cadastrado. 
+2024-10-24 20:12:58.9758 INFO ClienteController -> Alterar -> CPF informado já cadastrado. 
+2024-10-24 20:13:12.1499 INFO ClienteController -> Alterar -> CPF informado já cadastrado. 
+2024-10-24 21:09:46.0349 INFO ClienteController -> Incluir -> CPF informado já cadastrado. 
+2024-10-24 21:10:37.3361 ERROR ClienteController -> Incluir -> System.IndexOutOfRangeException: Não há linha na posição 0.
+   em System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   em System.Data.DataRowCollection.get_Item(Int32 index)
+   em FI.AtividadeEntrevista.DAL.DaoCliente.VerificarExistencia(String CPF, Int64 id) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Clientes\DaoCliente.cs:linha 62
+   em FI.AtividadeEntrevista.BLL.BoCliente.VerificarExistencia(String CPF, Int64 id) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\BLL\BoCliente.cs:linha 108
+   em FI.AtividadeEntrevista.BLL.BoCliente.Incluir(Cliente cliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\BLL\BoCliente.cs:linha 28
+   em WebAtividadeEntrevista.Controllers.ClienteController.Incluir(ClienteModel model) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 44 
+2024-10-24 21:14:26.2366 INFO ClienteController -> Alterar -> CPF informado já cadastrado. 
+2024-10-24 23:11:11.9878 INFO ClienteController -> Alterar -> CPF informado já cadastrado. 

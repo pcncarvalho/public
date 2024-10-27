@@ -52,5 +52,12 @@ namespace FI.AtividadeEntrevista.Utils
 
             return cpf.EndsWith(digito);
         }
+
+        public static long RandomId(int length)
+        {
+            var random = new Random();
+
+            return random.Next();
+        }
     }
 }
