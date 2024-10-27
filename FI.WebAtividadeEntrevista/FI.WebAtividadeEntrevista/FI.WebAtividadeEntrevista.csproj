@@ -197,6 +197,7 @@
     <Content Include="Scripts\Clientes\FI.Clientes.js" />
     <Content Include="Scripts\Clientes\FI.ListBeneficiarios.js" />
     <Content Include="Scripts\Clientes\FI.ListClientes.js" />
+    <Content Include="Scripts\FI.AtividadeEntrevista.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -361,6 +362,7 @@
     <Content Include="Scripts\jtable\themes\metro\red\jtable.less" />
     <Content Include="Views\Cliente\_Beneficiarios.cshtml" />
     <Content Include="Views\Cliente\_BeneficiariosList.cshtml" />
+    <Content Include="Views\Cliente\_AlterarBeneficiario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\themes\base\minified\images\" />

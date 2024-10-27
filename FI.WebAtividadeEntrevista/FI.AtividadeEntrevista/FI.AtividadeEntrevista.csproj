@@ -52,8 +52,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DAL\Beneficiarios\Procedures\FI_SP_AltBenef.sql" />
     <Content Include="DAL\Beneficiarios\Procedures\FI_SP_ConsBeneficiario.sql" />
+    <Content Include="DAL\Beneficiarios\Procedures\FI_SP_DelBeneficiario.sql" />
     <Content Include="DAL\Beneficiarios\Procedures\FI_SP_IncBeneficiario.sql" />
+    <Content Include="DAL\Beneficiarios\Procedures\FI_SP_VerificaBeneficiario.sql" />
     <Content Include="DAL\Clientes\Procedures\FI_SP_AltCliente.sql" />
     <Content Include="DAL\Clientes\Procedures\FI_SP_VerificaCliente.sql" />
     <Content Include="DAL\Clientes\Procedures\V2\FI_SP_AltClienteV2.sql" />
@@ -64,6 +67,7 @@
     <Content Include="DAL\Clientes\Procedures\V2\FI_SP_IncClienteV2.sql" />
     <Content Include="DAL\Clientes\Procedures\FI_SP_PesqCliente.sql" />
     <Content Include="DAL\Clientes\Procedures\V2\FI_SP_PesqClienteV2.sql" />
+    <Content Include="DAL\Clientes\Procedures\V2\FI_SP_VerificaClienteV2.sql" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FI.AtividadeEntrevista.Utils\FI.AtividadeEntrevista.Utils.csproj">

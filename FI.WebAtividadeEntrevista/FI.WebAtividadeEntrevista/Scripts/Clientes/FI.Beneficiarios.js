@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
 
     $('#formCadastroBeneficiario #CPF').mask('999.999.999-99');
+    $('#formAlterarBeneficiario #CPF').mask('999.999.999-99');
 
 });
 
@@ -34,34 +35,87 @@ function IncluirBeneficiario() {
     });
 }
 
-function AlterarBeneficiario(id) {
-    alert(id);
+function ModalAlterarBeneficiario(id, idCliente, cpf, nome) {
+
+    $('#formAlterarBeneficiario #Id').val(id);
+    $('#formAlterarBeneficiario #IdCliente').val(idCliente);
+    $('#formAlterarBeneficiario #CPF').val(cpf);
+    $('#formAlterarBeneficiario #Nome').val(nome);
+
+    $('#modal-alterar-beneficiario').modal('show');
 }
 
-function ExcluirBeneficiario(id) {
-    alert(id);
+function AlterarBeneficiario() {
+
+    var id = $('#formAlterarBeneficiario #Id').val();
+    var idCliente = $('#formAlterarBeneficiario #IdCliente').val();
+    var cpf = $('#formAlterarBeneficiario #CPF').val();
+    var nome = $('#formAlterarBeneficiario #Nome').val();
+
+    var urlPost = '/Cliente/AlterarBeneficiario';
+
+    $.ajax({
+        url: urlPost,
+        method: "POST",
+        data: {
+            "Id": id,
+            "IdCliente": idCliente,
+            "CPF": cpf,
+            "Nome": nome
+        },
+        error:
+            function (r) {
+                if (r.status == 401)
+                    ModalDialog("Atenção", r.responseJSON);
+                else if (r.status == 400)
+                    ModalDialog("Ocorreu um erro", r.responseJSON);
+                else if (r.status == 500)
+                    ModalDialog("Ocorreu um erro", "Ocorreu um erro interno no servidor.");
+            },
+        success:
+            function (r) {
+                $('#pnlBeneficiarios').html(r.BeneficiariosList);
+                $('#modal-alterar-beneficiario').modal('hide');
+                LimparDadosBeneficiario();
+                ModalDialog('Alteração beneficiário', r.Mensagem);
+            }
+    });
 }
 
-function ModalDialog(titulo, texto) {
-    var random = Math.random().toString().replace('.', '');
-    var texto = '<div id="' + random + '" class="modal fade">                                                               ' +
-        '        <div class="modal-dialog">                                                                                 ' +
-        '            <div class="modal-content">                                                                            ' +
-        '                <div class="modal-header">                                                                         ' +
-        '                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>         ' +
-        '                    <h4 class="modal-title">' + titulo + '</h4>                                                    ' +
-        '                </div>                                                                                             ' +
-        '                <div class="modal-body">                                                                           ' +
-        '                    <p>' + texto + '</p>                                                                           ' +
-        '                </div>                                                                                             ' +
-        '                <div class="modal-footer">                                                                         ' +
-        '                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>             ' +
-        '                                                                                                                   ' +
-        '                </div>                                                                                             ' +
-        '            </div><!-- /.modal-content -->                                                                         ' +
-        '  </div><!-- /.modal-dialog -->                                                                                    ' +
-        '</div> <!-- /.modal -->                                                                                        ';
+function LimparDadosBeneficiario() {
+    $('#formAlterarBeneficiario #Id').val(0);
+    $('#formAlterarBeneficiario #IdCliente').val(0);
+    $('#formAlterarBeneficiario #CPF').val('');
+    $('#formAlterarBeneficiario #Nome').val('');
+}
 
-    $('body').append(texto);
-    $('#' + random).modal('show');
+function ExcluirBeneficiario(id, idCliente) {
+
+    var urlPost = '/Cliente/ExcluirBeneficiario';
+
+    ShowConfirmation('Deseja realmente excluir o beneficiário?', function () {
+
+        $.ajax({
+            url: urlPost,
+            method: "POST",
+            data: {
+                "id": id
+            },
+            error:
+                function (r) {
+                    if (r.status == 401)
+                        ModalDialog("Atenção", r.responseJSON);
+                    else if (r.status == 400)
+                        ModalDialog("Ocorreu um erro", r.responseJSON);
+                    else if (r.status == 500)
+                        ModalDialog("Ocorreu um erro", "Ocorreu um erro interno no servidor.");
+                },
+            success:
+                function (r) {
+                    $('#pnlBeneficiarios').html(r.BeneficiariosList);
+                    ModalDialog('Exclusão beneficiário', r.Mensagem);
+                }
+        });
+    });
+
 }

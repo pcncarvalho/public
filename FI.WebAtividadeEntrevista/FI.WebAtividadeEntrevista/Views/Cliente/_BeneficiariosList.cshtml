@@ -19,7 +19,7 @@
                         <td>@item.CPF.FormatarCPF()</td>
                         <td>@item.Nome</td>
                         <td>
-                            <input type="button" value="Alterar" class="btn btn-primary" onclick="AlterarBeneficiario(@item.Id);" />
+                            <input type="button" value="Alterar" class="btn btn-primary" onclick="ModalAlterarBeneficiario(@item.Id, @item.IdCliente, '@item.CPF.FormatarCPF()', '@item.Nome');" />
                             <input type="button" value="Excluir" class="btn btn-primary" onclick="ExcluirBeneficiario(@item.Id);" />
                         </td>
                     </tr>

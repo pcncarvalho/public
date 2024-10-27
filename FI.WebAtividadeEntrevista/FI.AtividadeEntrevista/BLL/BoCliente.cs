@@ -46,7 +46,7 @@ namespace FI.AtividadeEntrevista.BLL
 
             if (!Utils.Utils.CPFValido(cliente.CPF))
             {
-                throw new Exception("CPF informado é inválido.");
+                throw new AtividadeEntrevistaException("CPF informado é inválido.");
             }
 
             if (VerificarExistencia(cliente.CPF, cliente.Id))

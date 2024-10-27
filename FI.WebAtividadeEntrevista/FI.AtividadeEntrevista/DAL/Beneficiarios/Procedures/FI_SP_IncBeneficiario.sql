@@ -1,4 +1,10 @@
-﻿CREATE PROC [dbo].[FI_SP_IncBeneficiario]
+﻿--==============================================================================================================
+-- Criacao
+-- Motivo:	Incluir um beneficiario 
+-- Autor:       Paulo Carvalho
+-- Data:        2024-10-27
+--==============================================================================================================
+CREATE PROC [dbo].[FI_SP_IncBeneficiario]
 	@CPF           VARCHAR (11),
     @NOME          VARCHAR (50) ,
     @IDCLIENTE     BIGINT

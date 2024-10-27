@@ -8,3 +8,22 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.modal-sm {
+    max-width: 350px;
+}
+
+.modal-alterar-beneficiario {
+    max-width: 550px;
+}
+
+.col-xs-2, col-xs-4, .col-xs-6 {
+    display: inline-block;
+}
+
+.vertical-center {
+    float: none;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-right: -20px;
+}

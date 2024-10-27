@@ -24,47 +24,35 @@ namespace FI.AtividadeEntrevista.BLL
                 throw new AtividadeEntrevistaException("CPF informado é inválido.");
             }
 
-            //if (VerificarExistencia(beneficiario.CPF, beneficiario.Id))
-            //{
-            //    throw new AtividadeEntrevistaException("CPF informado já cadastrado.");
-            //}
+            if (VerificarExistencia(beneficiario.CPF, beneficiario.Id, beneficiario.IdCliente))
+            {
+                throw new AtividadeEntrevistaException("CPF informado já cadastrado para este cliente.");
+            }
 
             return ben.Incluir(beneficiario);
         }
 
         /// <summary>
-        /// Altera um cliente
+        /// Altera um beneficiario
         /// </summary>
-        /// <param name="cliente">Objeto de cliente</param>
-        public void Alterar(DML.Cliente cliente)
+        /// <param name="cliente">Objeto de beneficiario</param>
+        public void Alterar(DML.Beneficiario beneficiario)
         {
-            DAL.DaoCliente cli = new DAL.DaoCliente();
+            DAL.DaoBeneficiario ben = new DAL.DaoBeneficiario();
 
-            cliente.CPF = cliente.CPF.SomenteAlfaNumericos();
-            cliente.CEP = cliente.CEP.SomenteAlfaNumericos();
+            beneficiario.CPF = beneficiario.CPF.SomenteAlfaNumericos();
 
-            if (!Utils.Utils.CPFValido(cliente.CPF))
+            if (!Utils.Utils.CPFValido(beneficiario.CPF))
             {
                 throw new Exception("CPF informado é inválido.");
             }
 
-            if (VerificarExistencia(cliente.CPF, cliente.Id))
+            if (VerificarExistencia(beneficiario.CPF, beneficiario.Id, beneficiario.IdCliente))
             {
-                throw new AtividadeEntrevistaException("CPF informado já cadastrado.");
+                throw new AtividadeEntrevistaException("CPF informado já cadastrado para este cliente.");
             }
 
-            cli.Alterar(cliente);
-        }
-
-        /// <summary>
-        /// Consulta o cliente pelo id
-        /// </summary>
-        /// <param name="id">id do cliente</param>
-        /// <returns></returns>
-        public DML.Cliente Consultar(long id)
-        {
-            DAL.DaoCliente cli = new DAL.DaoCliente();
-            return cli.Consultar(id);
+            ben.Alterar(beneficiario);
         }
 
         /// <summary>
@@ -79,44 +67,26 @@ namespace FI.AtividadeEntrevista.BLL
         }
 
         /// <summary>
-        /// Excluir o cliente pelo id
+        /// Excluir o beneficiario pelo id
         /// </summary>
-        /// <param name="id">id do cliente</param>
+        /// <param name="id">id do beneficiario</param>
         /// <returns></returns>
         public void Excluir(long id)
         {
-            DAL.DaoCliente cli = new DAL.DaoCliente();
-            cli.Excluir(id);
+            DAL.DaoBeneficiario ben = new DAL.DaoBeneficiario();
+            ben.Excluir(id);
         }
 
         /// <summary>
-        /// Lista os clientes
-        /// </summary>
-        public List<DML.Cliente> Listar()
-        {
-            DAL.DaoCliente cli = new DAL.DaoCliente();
-            return cli.Listar();
-        }
-
-        /// <summary>
-        /// Lista os clientes
-        /// </summary>
-        public List<DML.Cliente> Pesquisa(int iniciarEm, int quantidade, string campoOrdenacao, bool crescente, out int qtd)
-        {
-            DAL.DaoCliente cli = new DAL.DaoCliente();
-            return cli.Pesquisa(iniciarEm, quantidade, campoOrdenacao, crescente, out qtd);
-        }
-
-        /// <summary>
-        /// Verificar existencia de um cliente com CPF já cadastrado
+        /// Verificar existencia de um beneficiario com CPF já cadastrado para o mesmo cliente
         /// </summary>
         /// <param name="CPF"></param>
         /// <param name="id"></param>
         /// <returns></returns>
-        public bool VerificarExistencia(string CPF, long id)
+        public bool VerificarExistencia(string CPF, long id, long idCliente)
         {
-            DAL.DaoCliente cli = new DAL.DaoCliente();
-            return cli.VerificarExistencia(CPF, id);
+            DAL.DaoBeneficiario ben = new DAL.DaoBeneficiario();
+            return ben.VerificarExistencia(CPF, id, idCliente);
         }
     }
 }

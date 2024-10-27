@@ -17,23 +17,21 @@
                 <form id="formCadastroBeneficiario" method="post">
                     <div class="row">
                         <input type="hidden" id="IdCliente" name="IdCliente" value="@Model" />
-                        <div class="col-md-4">
+                        <div class="col-md-4 vertical-center">
                             <div class="form-group">
                                 <label for="CPF">CPF:</label>
                                 <input required="required" type="text" class="form-control" id="CPF" name="CPF" placeholder="Ex.: 010.011.111-00" maxlength="11">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-xs-6 vertical-center">
                             <div class="form-group">
                                 <label for="Nome">Nome:</label>
                                 <input required="required" type="text" class="form-control" id="Nome" name="Nome" placeholder="Ex.: Maria" maxlength="50">
                             </div>
                         </div>
-                        <div class="col-md-2">
-                            <div class="form-group ui-controlgroup-vertical">
-                                <div class="text-center">
-                                    <button type="button" class="btn btn-sm btn-success form-control" onclick="IncluirBeneficiario();">Incluir</button>
-                                </div>
+                        <div class="col-xs-2 vertical-center">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-sm btn-success form-control" onclick="IncluirBeneficiario();">Incluir</button>
                             </div>
                         </div>
 

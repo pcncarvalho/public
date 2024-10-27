@@ -40,6 +40,30 @@
     @Scripts.Render("~/bundles/jtable")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/jquerymask")
+    @Scripts.Render("~/bundles/atividadeEntrevista")
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+<!-- Modal confirm -->
+<div class="modal fade" id="confirmModal" style="display: none; z-index: 1050;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Atenção
+                </h4>
+            </div>
+            <div class="modal-body" id="confirmMessage">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="confirmOk">Sim</button>
+                <button type="button" class="btn btn-default" id="confirmCancel">Não</button>
+            </div>
+        </div>
+    </div>
+</div>

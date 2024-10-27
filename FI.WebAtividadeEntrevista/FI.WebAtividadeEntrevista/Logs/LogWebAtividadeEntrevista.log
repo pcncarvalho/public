@@ -1,31 +1,11 @@
-2024-10-27 00:00:13.6493 ERROR ClienteController -> BeneficiarioList -> System.ArgumentException: A coluna 'IdCliente' não pertence à tabela Table.
-   em System.Data.DataRow.GetDataColumn(String columnName)
-   em System.Data.DataRow.get_Item(String columnName)
-   em System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
-   em FI.AtividadeEntrevista.DAL.DaoBeneficiario.Converter(DataSet ds) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Beneficiarios\DaoBeneficiario.cs:linha 159
-   em FI.AtividadeEntrevista.DAL.DaoBeneficiario.ListarPorCliente(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\DAL\Beneficiarios\DaoBeneficiario.cs:linha 60
-   em FI.AtividadeEntrevista.BLL.BoBeneficiario.ListarPorCliente(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\BLL\BoBeneficiario.cs:linha 78
-   em WebAtividadeEntrevista.Controllers.ClienteController.BeneficiarioList(Int64 idCliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 268 
-2024-10-27 00:13:10.8499 ERROR ClienteController -> IncluirBeneficiario -> System.InvalidCastException: Não é possível converter um objeto do tipo 'System.Int32' no tipo 'System.Collections.Generic.List`1[FI.WebAtividadeEntrevista.Models.BeneficiarioModel]'.
-   em WebAtividadeEntrevista.Controllers.ClienteController.IncluirBeneficiario(BeneficiarioModel model) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 213 
-2024-10-27 00:15:16.0992 ERROR ClienteController -> IncluirBeneficiario -> System.InvalidCastException: Não é possível converter um objeto do tipo 'System.Int32' no tipo 'System.Collections.Generic.List`1[FI.WebAtividadeEntrevista.Models.BeneficiarioModel]'.
-   em WebAtividadeEntrevista.Controllers.ClienteController.IncluirBeneficiario(BeneficiarioModel model) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 213 
-2024-10-27 00:16:29.8674 ERROR ClienteController -> IncluirBeneficiario -> System.InvalidCastException: Não é possível converter um objeto do tipo 'System.Int32' no tipo 'System.Collections.Generic.List`1[FI.WebAtividadeEntrevista.Models.BeneficiarioModel]'.
-   em WebAtividadeEntrevista.Controllers.ClienteController.IncluirBeneficiario(BeneficiarioModel model) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 213 
-2024-10-27 00:18:14.0173 ERROR ClienteController -> IncluirBeneficiario -> System.InvalidCastException: Não é possível converter um objeto do tipo 'System.Int32' no tipo 'System.Collections.Generic.List`1[FI.WebAtividadeEntrevista.Models.BeneficiarioModel]'.
-   em WebAtividadeEntrevista.Controllers.ClienteController.IncluirBeneficiario(BeneficiarioModel model) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 211 
-2024-10-27 00:21:32.5438 ERROR ClienteController -> IncluirBeneficiario -> System.InvalidCastException: Não é possível converter um objeto do tipo 'System.Int32' no tipo 'System.Collections.Generic.List`1[FI.WebAtividadeEntrevista.Models.BeneficiarioModel]'.
-   em WebAtividadeEntrevista.Controllers.ClienteController.IncluirBeneficiario(BeneficiarioModel model) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 213 
-2024-10-27 00:22:02.4004 ERROR ClienteController -> IncluirBeneficiario -> System.InvalidCastException: Não é possível converter um objeto do tipo 'System.Int32' no tipo 'System.Collections.Generic.List`1[FI.WebAtividadeEntrevista.Models.BeneficiarioModel]'.
-   em WebAtividadeEntrevista.Controllers.ClienteController.IncluirBeneficiario(BeneficiarioModel model) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 213 
-2024-10-27 00:22:03.8040 ERROR ClienteController -> IncluirBeneficiario -> System.InvalidCastException: Não é possível converter um objeto do tipo 'System.Int32' no tipo 'System.Collections.Generic.List`1[FI.WebAtividadeEntrevista.Models.BeneficiarioModel]'.
-   em WebAtividadeEntrevista.Controllers.ClienteController.IncluirBeneficiario(BeneficiarioModel model) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 213 
-2024-10-27 00:37:35.2514 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
-2024-10-27 00:37:47.3561 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
-2024-10-27 00:39:16.1346 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
-2024-10-27 00:42:05.2484 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
-2024-10-27 00:42:40.5308 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
-2024-10-27 00:42:57.5356 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
-2024-10-27 00:45:25.3217 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
-2024-10-27 00:45:43.2812 INFO ClienteController -> IncluirBeneficiario -> CPF informado é inválido. 
-2024-10-27 00:51:45.0421 INFO ClienteController -> IncluirBeneficiario -> O campo Nome é obrigatório. 
+2024-10-27 15:48:11.5543 INFO ClienteController -> IncluirBeneficiario -> CPF informado já cadastrado para este cliente. 
+2024-10-27 15:48:39.5706 INFO ClienteController -> Incluir -> CPF informado já cadastrado. 
+2024-10-27 15:49:57.4445 INFO ClienteController -> AlterarBeneficiario -> CPF informado já cadastrado para este cliente. 
+2024-10-27 15:50:26.8624 INFO ClienteController -> Incluir -> CPF informado é inválido. 
+2024-10-27 15:50:43.3632 ERROR ClienteController -> Alterar -> System.Exception: CPF informado é inválido.
+   em FI.AtividadeEntrevista.BLL.BoCliente.Alterar(Cliente cliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\BLL\BoCliente.cs:linha 52
+   em WebAtividadeEntrevista.Controllers.ClienteController.Alterar(ClienteModel model) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 113 
+2024-10-27 15:51:29.4239 ERROR ClienteController -> Alterar -> System.Exception: CPF informado é inválido.
+   em FI.AtividadeEntrevista.BLL.BoCliente.Alterar(Cliente cliente) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\BLL\BoCliente.cs:linha 52
+   em WebAtividadeEntrevista.Controllers.ClienteController.Alterar(ClienteModel model) na C:\Users\pcnca\source\repos\public\FI.WebAtividadeEntrevista\FI.WebAtividadeEntrevista\Controllers\ClienteController.cs:linha 113 
+2024-10-27 15:53:09.7566 INFO ClienteController -> Alterar -> CPF informado já cadastrado. 
